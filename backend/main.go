@@ -64,9 +64,9 @@ var enableInteresrUserNotif bool
 var NormalGift = "一般"
 var YAAAAAGift = "高端"
 var LoveText = "点亮爱心"
-var FollowText = "关注了主播"
-var JoinText = "加入直播间"
-var QuitText = "离开直播间"
+var FollowText = "关注了Overseer"
+var JoinText = "进入了避难所"
+var QuitText = "离开避难所"
 var BanString []string
 var interestUsers []string
 var AConnMap = make(map[int](*Hub))
@@ -570,7 +570,7 @@ func main() {
 	r.HandleFunc("/chat", func(w http.ResponseWriter, r *http.Request) {
 		serveHome(w, r)
 	})
-	r.HandleFunc("/room/{key}", func(w http.ResponseWriter, r *http.Request) {
+	r.HandleFunc("/room/{12798600}", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "dist/index.html")
 	})
 	r.HandleFunc("/stylegen", func(w http.ResponseWriter, r *http.Request) {
